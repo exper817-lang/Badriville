@@ -1,50 +1,56 @@
-<div class="white_bg" style="padding-top: 30px;padding-bottom: 30px;">
-  <div class="container">
+<section class="bg-white" data-testid="homestay-section">
+<div class="container" style="padding-top: 60px;padding-bottom: 60px;">
+    <div class="section-header text-center">
+      <p class="premium-subtitle">Authentic Experience</p>
+      <h2>Badriville Homestay</h2>
+      <div class="premium-divider"></div>
+    </div>
     <div class="row small-gutters categories_grid">
-      <h3 class="mobile-title  mt-remove"><span class="caps-title">Badriville Homestay</span></h3>
-      <div class="col-sm-12 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-        <a href="#" class="more-img-padding speacial-product-img" style="border-radius: 7px;">
+      <div class="col-sm-12 col-md-6 wow zoomIn" data-wow-delay="0.3s" style="padding-right: 3rem;">
+        <a href="#" class="more-img-padding speacial-product-img image-overlay">
 
-          <img src="../../../../assets/img/home_stay/1.jpg" alt=""
+          <img src="../../../../assets/img/home_stay/1.jpg" alt="Badriville Homestay View 1"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
-          <img src="../../../../assets/img/home_stay/2.jpg" alt=""
+            style="width: 100%; height: 450px; object-fit: cover;">
+          <img src="../../../../assets/img/home_stay/2.jpg" alt="Badriville Homestay View 2"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
-          <img src="../../../../assets/img/home_stay/3.jpg" alt=""
+            style="width: 100%; height: 450px; object-fit: cover;">
+          <img src="../../../../assets/img/home_stay/3.jpg" alt="Badriville Homestay View 3"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
-          <img src="../../../../assets/img/home_stay/4.jpg" alt=""
+            style="width: 100%; height: 450px; object-fit: cover;">
+          <img src="../../../../assets/img/home_stay/4.jpg" alt="Badriville Homestay View 4"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
-          <img src="../../../../assets/img/home_stay/5.jpg" alt=""
+            style="width: 100%; height: 450px; object-fit: cover;">
+          <img src="../../../../assets/img/home_stay/5.jpg" alt="Badriville Homestay View 5"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
-          <img src="../../../../assets/img/home_stay/6.jpg" alt=""
+            style="width: 100%; height: 450px; object-fit: cover;">
+          <img src="../../../../assets/img/home_stay/6.jpg" alt="Badriville Homestay View 6"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
-          <img src="../../../../assets/img/home_stay/7.jpg" alt=""
+            style="width: 100%; height: 450px; object-fit: cover;">
+          <img src="../../../../assets/img/home_stay/7.jpg" alt="Badriville Homestay View 7"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
-          <img src="../../../../assets/img/home_stay/8.jpg" alt=""
+            style="width: 100%; height: 450px; object-fit: cover;">
+          <img src="../../../../assets/img/home_stay/8.jpg" alt="Badriville Homestay View 8"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
-          <img src="../../../../assets/img/home_stay/9.jpg" alt=""
+            style="width: 100%; height: 450px; object-fit: cover;">
+          <img src="../../../../assets/img/home_stay/9.jpg" alt="Badriville Homestay View 9"
             class="img-fluid homestay-slides homestay-slides-hidden more-img speacial-product-img"
-            style="border-radius: 7px; border-radius: 5px; width: 100%;">
+            style="width: 100%; height: 450px; object-fit: cover;">
         </a>
       </div>
       <div class="col-sm-12 col-md-6 padding-left" id="more-padding">
-        <h3 class="desktop-title  mt-remove"><span class="caps-title">Badriville Homestay</span></h3>
-        <p> Badriville Homestay - Joshimath </p>
-        <ul class="list_order" *ngFor="let item of homeStayList; let i=index;">
-          <li><span>{{i+1}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{item.benefits}}</li>
+        <h4 class="text-gold" style="font-family: var(--font-subheading); font-size: 1.125rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem;">A Home Away From Home</h4>
+        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray); margin-bottom: 2rem;">
+          Experience the warmth and hospitality of Badriville Homestay in Joshimath, where traditional comfort meets modern amenities in the heart of the Himalayas.
+        </p>
+        <ul class="list_order" style="list-style: none; padding: 0;" *ngFor="let item of homeStayList; let i=index;">
+          <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--color-border); font-size: 1rem; color: var(--color-gray);"><span style="display: inline-block; width: 30px; height: 30px; background: var(--color-primary-gold); color: white; text-align: center; line-height: 30px; border-radius: 50%; margin-right: 1rem; font-weight: 600;">{{i+1}}</span> {{item.benefits}}</li>
         </ul>
-        <button class="btn_1 mx-2 card-btns" (click)="homestay()">
-          More details</button>
-        <button class="btn_1 mx-2 card-btns" (click)="contactUs()">
-          Contact Us</button>
+        <div style="margin-top: 2.5rem;">
+          <button class="btn-primary" (click)="homestay()" style="margin-right: 1rem; margin-bottom: 1rem;">More Details</button>
+          <button class="btn-secondary" (click)="contactUs()" style="margin-bottom: 1rem;">Contact Us</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>

@@ -1,0 +1,851 @@
+/* ============================================================
+   BADRIVILLE PREMIUM HOTEL DESIGN - INSPIRED BY TAJ HOTELS
+   ============================================================
+   
+   Color Palette:
+   - Primary Gold: #B8956A (Taj Gold)
+   - Dark Gold: #9A7B4F
+   - Cream: #F5F3EF
+   - White: #FFFFFF
+   - Dark Text: #2C2C2C
+   - Light Gray: #666666
+   
+   Typography:
+   - Headlines: 'Playfair Display', serif
+   - Subheadings: 'Cormorant Garamond', serif  
+   - Body: 'Lato', sans-serif
+============================================================ */
+
+/* ============================================================
+   ROOT & BASE STYLES
+   ============================================================ */
+:root {
+  --color-primary-gold: #B8956A;
+  --color-dark-gold: #9A7B4F;
+  --color-cream: #F5F3EF;
+  --color-white: #FFFFFF;
+  --color-dark: #2C2C2C;
+  --color-gray: #666666;
+  --color-light-gray: #999999;
+  --color-border: #E8E6E1;
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-subheading: 'Cormorant Garamond', serif;
+  --font-body: 'Lato', sans-serif;
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body) !important;
+  color: var(--color-dark) !important;
+  background-color: var(--color-white) !important;
+  line-height: 1.7 !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.5px !important;
+  color: var(--color-dark) !important;
+  margin-bottom: 1.5rem !important;
+}
+
+h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+}
+
+h2 {
+  font-size: 2.75rem !important;
+  font-weight: 600 !important;
+}
+
+h3 {
+  font-size: 2rem !important;
+}
+
+h4 {
+  font-size: 1.5rem !important;
+  font-family: var(--font-subheading) !important;
+}
+
+p {
+  font-family: var(--font-body) !important;
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+  color: var(--color-gray) !important;
+  margin-bottom: 1.25rem !important;
+}
+
+/* Decorative text elements */
+.premium-subtitle {
+  font-family: var(--font-subheading);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary-gold);
+  margin-bottom: 1rem;
+}
+
+.premium-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--color-primary-gold);
+  margin: 2rem auto;
+  position: relative;
+}
+
+.premium-divider::before,
+.premium-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 2px;
+  background: var(--color-primary-gold);
+  transform: translateY(-50%);
+}
+
+.premium-divider::before {
+  left: -25px;
+}
+
+.premium-divider::after {
+  right: -25px;
+}
+
+/* ============================================================
+   HEADER & NAVIGATION - TAJ INSPIRED
+   ============================================================ */
+#top_line {
+  background: var(--color-dark) !important;
+  padding: 0.5rem 0 !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 0.5px !important;
+  border-bottom: 1px solid rgba(184, 149, 106, 0.2) !important;
+}
+
+#top_line a.phone {
+  color: var(--color-cream) !important;
+  font-weight: 400 !important;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+#top_line a.phone:hover {
+  color: var(--color-primary-gold) !important;
+}
+
+header {
+  background: var(--color-white) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+  padding: 1.5rem 0 !important;
+  position: relative;
+  z-index: 999;
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+header.sticky {
+  background: var(--color-white) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+#logo_home h1 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+#logo_home h1 a {
+  color: var(--color-dark) !important;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  font-size: 0 !important;
+  display: block;
+  width: 180px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+#logo_home h1 a::before {
+  content: 'BADRIVILLE';
+  font-size: 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-dark);
+}
+
+#logo_home h1 a:hover::before {
+  color: var(--color-primary-gold);
+}
+
+/* Main Menu - Taj Style */
+.main-menu ul li {
+  margin: 0 1.5rem !important;
+}
+
+.main-menu ul li a {
+  font-family: var(--font-body) !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  color: var(--color-dark) !important;
+  padding: 0.75rem 0 !important;
+  transition: var(--transition-smooth) !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+.main-menu ul li a:hover,
+.main-menu ul li a.active {
+  color: var(--color-primary-gold) !important;
+  border-bottom-color: var(--color-primary-gold) !important;
+}
+
+.main-menu ul li.submenu ul {
+  background: var(--color-white) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 0 !important;
+  padding: 1rem 0 !important;
+  min-width: 250px !important;
+}
+
+.main-menu ul li.submenu ul li {
+  margin: 0 !important;
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+.main-menu ul li.submenu ul li:last-child {
+  border-bottom: none !important;
+}
+
+.main-menu ul li.submenu ul li a {
+  padding: 0.75rem 2rem !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 0.5px !important;
+  text-transform: capitalize !important;
+  border-bottom: none !important;
+}
+
+.main-menu ul li.submenu ul li a:hover {
+  background: var(--color-cream) !important;
+  padding-left: 2.5rem !important;
+}
+
+/* Social Icons */
+.social-icon img {
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.social-icon img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+header.sticky .social-icon .sticky-social {
+  filter: brightness(0);
+  opacity: 0.6;
+}
+
+header.sticky .social-icon .sticky-social:hover {
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(57%) sepia(19%) saturate(847%) hue-rotate(358deg) brightness(93%) contrast(90%);
+}
+
+/* ============================================================
+   HERO/SLIDER SECTION - PREMIUM STYLE
+   ============================================================ */
+#rev_slider_45_1_wrapper,
+.rev_slider_wrapper {
+  position: relative;
+}
+
+.tp-caption,
+.tp-caption * {
+  font-family: var(--font-heading) !important;
+}
+
+.tp-caption h2 {
+  font-size: 4.5rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  color: var(--color-white) !important;
+  line-height: 1.2 !important;
+}
+
+.tp-caption p {
+  font-family: var(--font-subheading) !important;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
+  color: var(--color-cream) !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.tp-caption .btn_1,
+.tp-caption button {
+  background: var(--color-primary-gold) !important;
+  border: 2px solid var(--color-primary-gold) !important;
+  color: var(--color-white) !important;
+  font-family: var(--font-body) !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  padding: 1rem 2.5rem !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.tp-caption .btn_1:hover,
+.tp-caption button:hover {
+  background: var(--color-dark-gold) !important;
+  border-color: var(--color-dark-gold) !important;
+  transform: translateY(-2px);
+}
+
+/* Overlay for hero images */
+.rev-slidebg::after,
+.tp-bgimg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Slider bullets/navigation */
+.tp-bullet {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 2px solid var(--color-white) !important;
+}
+
+.tp-bullet.selected,
+.tp-bullet:hover {
+  background: var(--color-primary-gold) !important;
+  border-color: var(--color-primary-gold) !important;
+}
+
+/* ============================================================
+   BUTTONS - PREMIUM STYLE
+   ============================================================ */
+.btn,
+button,
+a.button,
+input[type="submit"] {
+  font-family: var(--font-body) !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  padding: 1rem 2.5rem !important;
+  border-radius: 0 !important;
+  transition: var(--transition-smooth) !important;
+  border: none !important;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary,
+.btn-outline_1,
+a.button.btn-primary {
+  background: var(--color-primary-gold) !important;
+  color: var(--color-white) !important;
+  border: 2px solid var(--color-primary-gold) !important;
+}
+
+.btn-primary:hover,
+.btn-outline_1:hover,
+a.button.btn-primary:hover {
+  background: var(--color-dark-gold) !important;
+  border-color: var(--color-dark-gold) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(184, 149, 106, 0.3) !important;
+}
+
+.btn-secondary,
+.btn-outline_2 {
+  background: transparent !important;
+  color: var(--color-primary-gold) !important;
+  border: 2px solid var(--color-primary-gold) !important;
+}
+
+.btn-secondary:hover,
+.btn-outline_2:hover {
+  background: var(--color-primary-gold) !important;
+  color: var(--color-white) !important;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   SECTION STYLES - MINIMAL & PREMIUM
+   ============================================================ */
+section {
+  padding: 6rem 0 !important;
+  position: relative;
+}
+
+section.gray {
+  background: var(--color-cream) !important;
+}
+
+section.white {
+  background: var(--color-white) !important;
+}
+
+section.dark {
+  background: var(--color-dark) !important;
+  color: var(--color-cream) !important;
+}
+
+section.dark h1,
+section.dark h2,
+section.dark h3,
+section.dark h4,
+section.dark h5,
+section.dark h6 {
+  color: var(--color-white) !important;
+}
+
+section.dark p {
+  color: var(--color-cream) !important;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--color-primary-gold);
+}
+
+.section-header p {
+  font-family: var(--font-subheading) !important;
+  font-size: 1.25rem !important;
+  color: var(--color-gray) !important;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   CARDS & CONTENT BOXES - ELEGANT STYLE
+   ============================================================ */
+.box_grid,
+.card,
+.tour_container {
+  background: var(--color-white) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+  transition: var(--transition-smooth) !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.box_grid:hover,
+.card:hover,
+.tour_container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.box_grid figure img,
+.card img,
+.tour_container img {
+  transition: var(--transition-smooth) !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+.box_grid:hover figure img,
+.card:hover img,
+.tour_container:hover img {
+  transform: scale(1.08);
+}
+
+.box_grid .wrapper,
+.card-body,
+.tour_container .tour_title {
+  padding: 2rem !important;
+}
+
+.box_grid h3,
+.card h3,
+.tour_container h3 {
+  font-family: var(--font-subheading) !important;
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  color: var(--color-dark) !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.5px !important;
+}
+
+.box_grid p,
+.card p,
+.tour_container p {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  color: var(--color-gray) !important;
+}
+
+.box_grid small,
+.card small,
+.tour_container small {
+  font-family: var(--font-body) !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: var(--color-primary-gold) !important;
+}
+
+/* Price Display */
+.price,
+.tour_price {
+  font-family: var(--font-heading) !important;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  color: var(--color-primary-gold) !important;
+}
+
+/* ============================================================
+   IMAGES & FIGURES - PREMIUM TREATMENT
+   ============================================================ */
+figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+figure::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+figure:hover::after {
+  opacity: 1;
+}
+
+/* ============================================================
+   FORMS - ELEGANT INPUT STYLES
+   ============================================================ */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select,
+.form-control {
+  font-family: var(--font-body) !important;
+  font-size: 0.95rem !important;
+  padding: 1rem 1.5rem !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 0 !important;
+  background: var(--color-white) !important;
+  color: var(--color-dark) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus,
+.form-control:focus {
+  border-color: var(--color-primary-gold) !important;
+  box-shadow: 0 0 0 3px rgba(184, 149, 106, 0.1) !important;
+  outline: none !important;
+}
+
+label {
+  font-family: var(--font-body) !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  color: var(--color-dark) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* ============================================================
+   FOOTER - ELEGANT & MINIMAL
+   ============================================================ */
+footer {
+  background: var(--color-dark) !important;
+  color: var(--color-cream) !important;
+  padding: 4rem 0 2rem !important;
+  border-top: 1px solid rgba(184, 149, 106, 0.2) !important;
+}
+
+footer h3,
+footer h4,
+footer h5 {
+  font-family: var(--font-subheading) !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: var(--color-white) !important;
+  margin-bottom: 1.5rem !important;
+}
+
+footer p,
+footer li,
+footer a {
+  font-family: var(--font-body) !important;
+  font-size: 0.95rem !important;
+  color: var(--color-cream) !important;
+  line-height: 1.8 !important;
+}
+
+footer a {
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--color-primary-gold) !important;
+  padding-left: 5px;
+}
+
+footer .copyright {
+  border-top: 1px solid rgba(184, 149, 106, 0.2);
+  padding-top: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-light-gray);
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.text-center {
+  text-align: center !important;
+}
+
+.text-gold {
+  color: var(--color-primary-gold) !important;
+}
+
+.bg-cream {
+  background: var(--color-cream) !important;
+}
+
+.bg-white {
+  background: var(--color-white) !important;
+}
+
+.bg-dark {
+  background: var(--color-dark) !important;
+}
+
+.mt-lg {
+  margin-top: 4rem !important;
+}
+
+.mb-lg {
+  margin-bottom: 4rem !important;
+}
+
+.py-lg {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Premium spacing */
+.container {
+  max-width: 1200px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* ============================================================
+   ANIMATIONS & TRANSITIONS
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem !important;
+  }
+  
+  section {
+    padding: 4rem 0 !important;
+  }
+  
+  .main-menu ul li {
+    margin: 0 !important;
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+  
+  .main-menu ul li a {
+    padding: 1rem 2rem !important;
+    display: block;
+  }
+  
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* ============================================================
+   PRELOADER - ELEGANT STYLE
+   ============================================================ */
+#preloader {
+  background: var(--color-white) !important;
+}
+
+.sk-spinner-wave .sk-rect1,
+.sk-spinner-wave .sk-rect2,
+.sk-spinner-wave .sk-rect3,
+.sk-spinner-wave .sk-rect4,
+.sk-spinner-wave .sk-rect5 {
+  background-color: var(--color-primary-gold) !important;
+}
+
+/* ============================================================
+   SPECIAL EFFECTS - TAJ INSPIRED
+   ============================================================ */
+/* Elegant underline effect */
+.elegant-link {
+  position: relative;
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.elegant-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary-gold);
+  transition: var(--transition-smooth);
+}
+
+.elegant-link:hover::after {
+  width: 100%;
+}
+
+.elegant-link:hover {
+  color: var(--color-primary-gold);
+}
+
+/* Image overlay on hover */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(184, 149, 106, 0.85);
+  opacity: 0;
+  transition: var(--transition-smooth);
+  z-index: 1;
+}
+
+.image-overlay:hover::before {
+  opacity: 1;
+}
+
+/* Premium badge */
+.premium-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: var(--color-primary-gold);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
