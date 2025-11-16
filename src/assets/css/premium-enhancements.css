@@ -1,0 +1,610 @@
+/**
+ * BADRIVILLE PREMIUM ENHANCEMENTS
+ * 
+ * This file ENHANCES the original design to be more premium and classy
+ * Inspired by: Taj Hotels, Oberoi Hotels, luxury hospitality brands
+ */
+
+/* ===== PREMIUM COLOR PALETTE ===== */
+:root {
+  --badri-gold: #B8956A;
+  --badri-dark: #2C2518;
+  --badri-cream: #F5F3EF;
+  --badri-text: #3C3C3C;
+  --badri-light: #666666;
+}
+
+/* ===== IMPROVED NAVIGATION - ALWAYS VISIBLE ===== */
+
+/* Make header always visible and sticky */
+header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  background: #fff !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Top line with better colors */
+#top_line {
+  background: var(--badri-dark) !important;
+  border-bottom: 1px solid rgba(184, 149, 106, 0.2) !important;
+}
+
+#top_line .phone {
+  color: var(--badri-cream) !important;
+  transition: all 0.3s ease !important;
+}
+
+#top_line .phone:hover {
+  color: var(--badri-gold) !important;
+}
+
+/* Ensure menu is always visible */
+.main-menu {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.main-menu ul.show_normal {
+  display: flex !important;
+}
+
+/* Better menu styling */
+.main-menu ul li {
+  margin: 0 2rem !important;
+}
+
+.main-menu ul li a {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--badri-text) !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+}
+
+.main-menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--badri-gold);
+  transition: width 0.3s ease;
+}
+
+.main-menu ul li a:hover {
+  color: var(--badri-gold) !important;
+}
+
+.main-menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* ===== FIX TEXT VISIBILITY ON SLIDER ===== */
+
+/* Add dark overlay to slider images for better text contrast */
+.rev-slidebg::before,
+.mbl-slider::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  z-index: 1 !important;
+}
+
+/* Make ALL slider text white with strong shadow */
+.tp-caption,
+.tp-caption *,
+.tp-resizeme,
+#slide-67-layer-2,
+#slide-66-layer-2,
+#slide-68-layer-2 {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+  z-index: 100 !important;
+}
+
+/* Slider buttons */
+.tp-caption .btn_1,
+.tp-caption button,
+.rs-btn {
+  background: #fff !important;
+  color: #333 !important;
+  border: 2px solid #fff !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+
+.tp-caption .btn_1:hover,
+.tp-caption button:hover {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+/* ===== PREMIUM TYPOGRAPHY IMPROVEMENTS ===== */
+
+body {
+  font-family: "Montserrat", Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--badri-text) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600 !important;
+  color: var(--badri-dark) !important;
+}
+
+.main_title h2 {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  color: var(--badri-dark) !important;
+}
+
+.main_title h2 span {
+  color: var(--badri-gold) !important;
+  font-weight: 600 !important;
+}
+
+.main_title p {
+  font-size: 18px !important;
+  color: var(--badri-light) !important;
+}
+
+/* Override bright colors with premium palette */
+h2 span,
+h3 span,
+h4 span {
+  color: var(--badri-gold) !important;
+}
+
+a {
+  color: var(--badri-gold) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--badri-dark) !important;
+}
+
+/* ===== PREMIUM BUTTONS ===== */
+
+.btn_1,
+.btn_2,
+button:not(.close):not(.carousel-control-prev):not(.carousel-control-next) {
+  background: var(--badri-gold) !important;
+  border: 2px solid var(--badri-gold) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  padding: 14px 35px !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px !important;
+}
+
+.btn_1:hover,
+.btn_2:hover,
+button:not(.close):hover {
+  background: var(--badri-dark) !important;
+  border-color: var(--badri-dark) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 149, 106, 0.3) !important;
+}
+
+/* ===== IMPROVED CARDS ===== */
+
+.box_grid,
+.tour_container {
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+.box_grid:hover,
+.tour_container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.box_grid figure img,
+.tour_container img {
+  transition: transform 0.5s ease !important;
+}
+
+.box_grid:hover figure img,
+.tour_container:hover img {
+  transform: scale(1.08);
+}
+
+/* ===== PREMIUM SECTIONS ===== */
+
+section {
+  padding: 70px 0 !important;
+}
+
+/* Alternating section backgrounds - subtle */
+section:nth-child(even),
+.white_bg {
+  background: #fff !important;
+}
+
+section:nth-child(odd) {
+  background: var(--badri-cream) !important;
+}
+
+/* ===== PREMIUM FOOTER ===== */
+
+footer {
+  background: var(--badri-dark) !important;
+  color: var(--badri-cream) !important;
+  padding: 60px 0 30px !important;
+}
+
+footer h3,
+footer h4 {
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  margin-bottom: 20px !important;
+}
+
+footer a {
+  color: var(--badri-cream) !important;
+  transition: all 0.3s ease !important;
+}
+
+footer a:hover {
+  color: var(--badri-gold) !important;
+}
+
+footer i,
+footer img {
+  color: var(--badri-gold) !important;
+  filter: invert(72%) sepia(19%) saturate(632%) hue-rotate(358deg) brightness(93%) contrast(87%);
+}
+
+/* ===== REVIEW SECTION ===== */
+
+.review_strip {
+  background: #fff !important;
+  padding: 30px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.review_strip h4 {
+  color: #333 !important;
+  font-weight: 600 !important;
+}
+
+.review_strip p {
+  color: #666 !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+/* ===== PREMIUM FORMS ===== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  border: 1px solid var(--badri-border) !important;
+  padding: 14px 18px !important;
+  border-radius: 2px !important;
+  transition: all 0.3s ease !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--badri-gold) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(184, 149, 106, 0.1) !important;
+}
+
+/* ===== IMAGE QUALITY ===== */
+
+img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* ===== SMOOTH SCROLLING ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== RESPONSIVE IMPROVEMENTS ===== */
+
+@media (max-width: 768px) {
+  .main-menu ul li {
+    margin: 0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+  
+  .main-menu ul li a {
+    display: block !important;
+    padding: 15px 20px !important;
+  }
+  
+  section {
+    padding: 40px 0 !important;
+  }
+}
+
+/* ===== FIX SPECIFIC PAGE ISSUES ===== */
+
+/* Hotel pages */
+.white_bg {
+  background: #fff !important;
+}
+
+/* Activity cards */
+.activity-mobile-view .tour_container {
+  margin-bottom: 30px !important;
+}
+
+/* Product cards */
+.shop-item {
+  border-radius: 4px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+.shop-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-5px);
+}
+
+.product_description {
+  padding: 25px !important;
+}
+
+.product_description h3 {
+  color: var(--badri-dark) !important;
+  font-weight: 600 !important;
+}
+
+.product_description h3 a {
+  color: var(--badri-dark) !important;
+}
+
+.product_description h3 a:hover {
+  color: var(--badri-gold) !important;
+}
+
+.price {
+  color: var(--badri-gold) !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+}
+
+/* Rating stars */
+.rating i {
+  color: var(--badri-gold) !important;
+}
+
+/* ===== PREMIUM TOUCHES ===== */
+
+/* Better link hovers */
+a {
+  transition: all 0.3s ease !important;
+}
+
+/* Smooth transitions everywhere */
+* {
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease !important;
+}
+
+/* Subtle animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== CONSISTENCY ACROSS ALL PAGES ===== */
+
+/* Consistent premium spacing */
+.container {
+  max-width: 1200px !important;
+  padding: 0 20px !important;
+}
+
+/* Consistent shadows */
+.box_grid,
+.tour_container,
+.shop-item,
+.review_strip {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+}
+
+/* ===== PREMIUM DETAILS ===== */
+
+.premium-subtitle {
+  font-size: 12px !important;
+  color: var(--badri-light) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 10px !important;
+  font-weight: 500 !important;
+}
+
+/* Ribbons with premium colors */
+.ribbon_3 {
+  background: var(--badri-gold) !important;
+  font-weight: 600 !important;
+}
+
+.ribbon_3.popular {
+  background: var(--badri-dark) !important;
+}
+
+/* Info overlays on images */
+.short_info {
+  background: rgba(44, 37, 24, 0.85) !important;
+  color: #fff !important;
+  backdrop-filter: blur(5px);
+}
+
+.short_info .price {
+  color: var(--badri-gold) !important;
+}
+
+/* Icons with premium colors - ALL icons including checkmarks */
+.icon-phone,
+.icon-location,
+.icon-ok,
+.icon-ok-circled,
+.icon-ok-circled2,
+i[class*="icon-"],
+[class*="icon_set"],
+.list_ok i,
+ul.list_ok i::before {
+  color: var(--badri-gold) !important;
+}
+
+/* List checkmarks specifically */
+ul.list_ok li::before,
+.list_ok i {
+  color: var(--badri-gold) !important;
+}
+
+/* Social media icons */
+.social_footer_2 a,
+.social_footer a,
+.follow_us a,
+#social_footer ul li a,
+#social_footer a {
+  background: var(--badri-gold) !important;
+  border-color: var(--badri-gold) !important;
+  color: #fff !important;
+  transition: all 0.3s ease !important;
+}
+
+.social_footer_2 a:hover,
+.social_footer a:hover,
+.follow_us a:hover,
+#social_footer ul li a:hover {
+  background: var(--badri-dark) !important;
+  border-color: var(--badri-dark) !important;
+}
+
+/* Footer icons and images */
+footer img[src*="icons8"],
+footer i {
+  filter: invert(62%) sepia(29%) saturate(456%) hue-rotate(358deg) brightness(92%) contrast(86%) !important;
+}
+
+/* Tour titles */
+.tour_title h3 {
+  color: var(--badri-dark) !important;
+  font-weight: 600 !important;
+}
+
+.tour_title h3 strong {
+  font-weight: 700 !important;
+}
+
+/* ===== PREMIUM LIST STYLING ===== */
+
+.list_order li,
+.list_ok li {
+  color: var(--badri-text) !important;
+  font-size: 14px !important;
+  line-height: 1.8 !important;
+}
+
+.list_order li span {
+  background: var(--badri-gold) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+/* ===== OVERRIDE ALL BRIGHT COLORS WITH PREMIUM PALETTE ===== */
+
+/* Override bright green (#5BC236) everywhere */
+.ribbon_3,
+.btn.green,
+button.green,
+[style*="background:#5BC236"],
+[style*="background: #5BC236"],
+[style*="color:#5BC236"],
+[style*="color: #5BC236"] {
+  background: var(--badri-gold) !important;
+  color: #fff !important;
+  border-color: var(--badri-gold) !important;
+}
+
+/* Override bright pink (#e14d67) everywhere */
+[style*="background:#e14d67"],
+[style*="background: #e14d67"],
+[style*="color:#e14d67"],
+[style*="color: #e14d67"] {
+  background: var(--badri-gold) !important;
+  color: #fff !important;
+  border-color: var(--badri-gold) !important;
+}
+
+/* Override bright blue (#51bce6) everywhere */
+[style*="background:#51bce6"],
+[style*="background: #51bce6"],
+[style*="color:#51bce6"],
+[style*="color: #51bce6"] {
+  background: var(--badri-dark) !important;
+  color: #fff !important;
+  border-color: var(--badri-dark) !important;
+}
+
+/* Fix ALL button classes to use premium colors */
+.button_intro,
+a.button_intro,
+.btn_map,
+a.btn_map,
+input[type="submit"] {
+  background: var(--badri-gold) !important;
+  border: 2px solid var(--badri-gold) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+}
+
+.button_intro:hover,
+a.button_intro:hover,
+.btn_map:hover,
+a.btn_map:hover,
+input[type="submit"]:hover {
+  background: var(--badri-dark) !important;
+  border-color: var(--badri-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 149, 106, 0.3) !important;
+}
